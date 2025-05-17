@@ -2,11 +2,164 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: {{projectTitle}}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+      Gllacy shop
+    </title>
+    <link rel="stylesheet" href="/style/style.css">
+    <link rel="icon" href="/img/Favicon/32.png" type="image/png" sizes="32x32">
   </head>
   <body>
-
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS. Профессиональная вёрстка сайтов</a>».</p>
-
+    <h1 class="visually-hidden">
+      Главная страница магазина "Gllacy".
+    </h1>
+    <header class="header main__header">
+      <a class="header__logo__link">
+        <img class="main__logo" href="/" width="137" height="56" alt="Логотип магазина">
+      </a>
+      <nav class="header__nav">
+        <ul class="header__nav__list">
+          <li class="header__nav__item">
+            Каталог
+            <ul class="nav__inner-list">
+              <li class="nav__inner-item inner-item--special">
+                Новинки
+              </li>
+              <li class="nav__inner-item">
+                Сливочное
+              </li>
+              <li class="nav__inner-item">
+                Щербеты
+              </li>
+              <li class="nav__inner-item">
+                Фруктовый лед
+              </li>
+              <li class="nav__inner-item">
+                Мелорин
+              </li>
+            </ul>
+          </li>
+          <li class="header__nav__item">
+            Доставка и оплата
+          </li>
+          <li class="header__nav__item">
+            О компании
+          </li>
+        </ul>
+      </nav>
+      <a class="header__phone" href="tel:78005558628">
+        +7 800 555-86-28
+      </a>
+      <ul class="header__user-list">
+        <li class="user-list__item">
+          <button class="user-list__button" type="button">
+            <span class="visually-hidden">
+              Поиск по сайту.
+            </span>
+          </button>
+          <form class="header__form" action="https://echo.htmlacademy.ru/" method="get">
+            <label class="visually-hidden" for="search">Поле поиска.</label>
+            <input class="header__field field" type="text" id="search">
+            <button class="visually-hidden" type="submit">
+              Поиск
+            </button>
+          </form>
+        </li>
+        <li class="user-list__item">
+          <li class="user-list__item">
+          <button class="user-list__button" type="button">
+            Вход
+          </button>
+          <div class="popover sign-up__container">
+            <h3 class="popover__title">
+              Личный кабинет
+            </h3>
+            <form class="popover__form" action="https://echo.htmlacademy.ru/" method="post">
+              <label class="visually-hidden" for="email">
+                Почта.
+              </label>
+              <input class="popover__field field" type="email" id="email" placeholder="email@mail.ru">
+              <label class="visually-hidden" for="password">
+                Пароль.
+              </label>
+              <input class="popover__field field" type="password" id="password" placeholder="email@mail.ru">
+              <div class="popover__inner-container">
+                <button class="sign-up__button button" type="submit">
+                  Войти
+                </button>
+                <a class="popover__form__link link" href="">
+                  Забыли пароль?
+                </a>
+                <a class="popover__form__link link" href="">
+                  Регистрация
+                </a>
+              </div>
+            </form>
+          </div>
+        </li>
+        <li class="user-list__item">
+          <button class="user-list__button">
+            2 Товара
+          </button>
+          <div class="popover cart__container">
+            <h2 class="popover__title">
+              Корзина
+            </h2>
+            <ul class="cart__list">
+              <li class="cart__list__item">
+                <div class="cart__item__container">
+                  <img clas="cart__item__img" href="" width="46" height="46" alt="Пример мороженого со вкусов 'Малинка'">
+                  <div class="cart__inner-container">
+                    <h3 class="cart__item__title">
+                      Малинка
+                    </h3>
+                    <span class="cart__item__description">
+                      1 кг х 310 ₽
+                    </span>
+                  </div>
+                </div>
+                <span class="cart__item__price">
+                  310 ₽
+                </span>
+                <button class="cart__button-close">
+                  <span class="visually-hidden">
+                    Удалить товар из списка.
+                  </span>
+                </button>
+              </li>
+              <li class="cart__list__item">
+                <div class="cart__item__container">
+                  <img clas="cart__item__img" href="" width="46" height="46" alt="Пример мороженого со вкусов 'Бабл-гам'">
+                  <div class="cart__inner-container">
+                    <h3 class="cart__item__title">
+                      Бабл-гам
+                    </h3>
+                    <span class="cart__item__description">
+                      1,5 кг х 320 ₽
+                    </span>
+                  </div>
+                </div>
+                <span class="cart__item__price">
+                  480 ₽
+                </span>
+                <button class="cart__button-close">
+                  <span class="visually-hidden">
+                    Удалить товар из списка.
+                  </span>
+                </button>
+              </li>
+            </ul>
+            <div class="cart__inner-container">
+              <a class="buy-button button" href="">
+                Оформить заказ
+              </a>
+              <span class="cart__bill">
+                Итого: 790 ₽
+              </span>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </header>
   </body>
 </html>
