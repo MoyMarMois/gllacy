@@ -1,52 +1,75 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-      Gllacy shop
-    </title>
-    <link rel="stylesheet" href="/style/style.css">
-    <link rel="icon" href="/img/Favicon/32.png" type="image/png" sizes="32x32">
-  </head>
-  <body>
-    <h1 class="visually-hidden">
-      Главная страница магазина "Gllacy".
-    </h1>
-    <header class="header main__header">
-      <a class="header__logo__link">
-        <img class="main__logo" href="/" width="137" height="56" alt="Логотип магазина">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>
+    Gllacy shop
+  </title>
+  <link rel="stylesheet" href="/style/style.css">
+  <link rel="icon" href="/img/Favicon/32.png" type="image/png" sizes="32x32">
+</head>
+
+<body>
+  <h1 class="visually-hidden">
+    Главная страница магазина "Gllacy".
+  </h1>
+  <header class="header main__header">
+
+    <div class="header__column">
+      <a class="header__logo__link" href="/">
+        <img class="main__logo" src="/img/svg/main-logo.svg" width="137" height="56" alt="Логотип магазина">
       </a>
       <nav class="header__nav">
         <ul class="header__nav__list">
           <li class="header__nav__item">
-            Каталог
+            <a class="header__nav__link" href="#">
+              Каталог
+            </a>
             <ul class="nav__inner-list">
-              <li class="nav__inner-item inner-item--special">
-                Новинки
+              <li class="nav__inner-item ">
+                <a class="inner-item__link inner-link--special" href="#">
+                  Новинки
+                </a>
               </li>
               <li class="nav__inner-item">
-                Сливочное
+                <a class="inner-item__link" href="#">
+                  Сливочное
+                </a>
               </li>
               <li class="nav__inner-item">
-                Щербеты
+                <a class="inner-item__link" href="#">
+                  Щербеты
+                </a>
               </li>
               <li class="nav__inner-item">
-                Фруктовый лед
+                <a class="inner-item__link" href="#">
+                  Фруктовый лед
+                </a>
               </li>
               <li class="nav__inner-item">
-                Мелорин
+                <a class="inner-item__link" href="#">
+                  Мелорин
+                </a>
               </li>
             </ul>
           </li>
           <li class="header__nav__item">
-            Доставка и оплата
+            <a class="header__nav__link" href="#">
+              Доставка и оплата
+            </a>
           </li>
           <li class="header__nav__item">
-            О компании
+            <a class="header__nav__link" href="#">
+              О компании
+            </a>
           </li>
         </ul>
       </nav>
+    </div>
+
+    <div class="header__column">
       <a class="header__phone" href="tel:78005558628">
         +7 800 555-86-28
       </a>
@@ -57,16 +80,22 @@
               Поиск по сайту.
             </span>
           </button>
-          <form class="header__form" action="https://echo.htmlacademy.ru/" method="get">
-            <label class="visually-hidden" for="search">Поле поиска.</label>
-            <input class="header__field field" type="text" id="search">
-            <button class="visually-hidden" type="submit">
-              Поиск
-            </button>
-          </form>
+          <div class="popover search__container">
+            <h2 class="visually-hidden">
+              Поиск по сайту.
+            </h2>
+            <form class="header__form" action="https://echo.htmlacademy.ru/" method="get">
+              <label class="visually-hidden" for="search">
+                Поле поиска.
+              </label>
+              <input class="header__field field" type="text" id="search" placeholder="Поиск по сайту">
+              <button class="visually-hidden" type="submit">
+                Поиск
+              </button>
+            </form>
+          </div>
         </li>
         <li class="user-list__item">
-          <li class="user-list__item">
           <button class="user-list__button" type="button">
             Вход
           </button>
@@ -82,24 +111,26 @@
               <label class="visually-hidden" for="password">
                 Пароль.
               </label>
-              <input class="popover__field field" type="password" id="password" placeholder="email@mail.ru">
+              <input class="popover__field field" type="password" id="password" placeholder="******">
               <div class="popover__inner-container">
                 <button class="sign-up__button button" type="submit">
                   Войти
                 </button>
-                <a class="popover__form__link link" href="">
-                  Забыли пароль?
-                </a>
-                <a class="popover__form__link link" href="">
-                  Регистрация
-                </a>
+                <div class="sign-up__container__links">
+                  <a class="popover__form__link link" href="#">
+                    Забыли пароль?
+                  </a>
+                  <a class="popover__form__link link" href="#">
+                    Регистрация
+                  </a>
+                </div>
               </div>
             </form>
           </div>
         </li>
         <li class="user-list__item">
-          <button class="user-list__button">
-            2 Товара
+          <button class="user-list__button" type="button">
+            2 товара
           </button>
           <div class="popover cart__container">
             <h2 class="popover__title">
@@ -107,16 +138,15 @@
             </h2>
             <ul class="cart__list">
               <li class="cart__list__item">
-                <div class="cart__item__container">
-                  <img clas="cart__item__img" href="" width="46" height="46" alt="Пример мороженого со вкусов 'Малинка'">
-                  <div class="cart__inner-container">
-                    <h3 class="cart__item__title">
-                      Малинка
-                    </h3>
-                    <span class="cart__item__description">
-                      1 кг х 310 ₽
-                    </span>
-                  </div>
+                <img clas="cart__item__img" src="/img/png/header/product_1.png" width="46" height="46"
+                  alt="Пример мороженого со вкусов 'Малинка'">
+                <div class="cart__list-container">
+                  <h3 class="cart__item__title">
+                    Малинка
+                  </h3>
+                  <span class="cart__item__description">
+                    1 кг х 310 ₽
+                  </span>
                 </div>
                 <span class="cart__item__price">
                   310 ₽
@@ -128,16 +158,15 @@
                 </button>
               </li>
               <li class="cart__list__item">
-                <div class="cart__item__container">
-                  <img clas="cart__item__img" href="" width="46" height="46" alt="Пример мороженого со вкусов 'Бабл-гам'">
-                  <div class="cart__inner-container">
-                    <h3 class="cart__item__title">
-                      Бабл-гам
-                    </h3>
-                    <span class="cart__item__description">
-                      1,5 кг х 320 ₽
-                    </span>
-                  </div>
+                <img clas="cart__item__img" src="/img/png/header/product_2_babl-gum.png" width="46" height="46"
+                  alt="Пример мороженого со вкусов 'Бабл-гам'">
+                <div class="cart__list-container">
+                  <h3 class="cart__item__title">
+                    Бабл-гам
+                  </h3>
+                  <span class="cart__item__description">
+                    1,5 кг х 320 ₽
+                  </span>
                 </div>
                 <span class="cart__item__price">
                   480 ₽
@@ -160,6 +189,125 @@
           </div>
         </li>
       </ul>
-    </header>
-  </body>
+    </div>
+
+  </header>
+
+  <main class="main main-site">
+
+    <section class="main__products">
+      <div class="products__container">
+        <div class="product__column__description">
+          <span class="section-title">
+            Нежный пломбир<br>с клубничным джемом
+          </span>
+          <p class="product__description">
+            Натуральное мороженое из свежих сливок<br>и молока с вкуснейшим клубничным джемом – это идеальный десерт для
+            всей семьи.
+          </p>
+          <a class="products__link button another-button">
+            Заказать
+          </a>
+        </div>
+        <div class="product__column__photo">
+          <ul class="product__gallery">
+            <li class="product__gallery__item main__gallery__product">
+              <img class="product__galley__image" src="/img/png/main/ice_cream_main.png" width="327" height="507"
+                alt="Пломбир с клубничным джемом">
+              <ul class="product__gallery__slider">
+                <li class="gallery__slider__item">
+                  <button class="gallery__slider prev-slider" type="button">
+                    <svg class="gallery__slider__icon" focusable="false" aria-hidden="true" width="7" height="12" viewBox="0 0 7 12"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M5.71044 11.1352C5.97014 11.3949 6.39119 11.3949 6.65089 11.1352C6.91059 10.8755 6.91059 10.4545 6.65089 10.1948L2.44961 5.99351L6.65093 1.79219C6.91063 1.53249 6.91063 1.11144 6.65093 0.85174C6.39123 0.592042 5.97017 0.592042 5.71048 0.85174L1.04176 5.52045C1.04081 5.52139 1.03987 5.52233 1.03892 5.52328C0.779225 5.78298 0.779225 6.20403 1.03892 6.46373L5.71044 11.1352Z"
+                         />
+                    </svg>
+                    <span class="visually-hidden">
+                      Переключить на предыдущий слайд.
+                    </span>
+                  </button>
+                </li>
+                <li class="gallery__slider__item">
+                  <button class="gallery__slider next-slider" type="button">
+                    <svg class="gallery__slider__icon" focusable="false" aria-hidden="true" width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M1.28956 0.864757C1.02986 0.605058 0.608808 0.605058 0.349109 0.864757C0.0894107 1.12446 0.0894107 1.54551 0.349109 1.80521L4.55039 6.00649L0.349071 10.2078C0.0893722 10.4675 0.0893722 10.8886 0.349071 11.1483C0.608769 11.408 1.02982 11.408 1.28952 11.1483L5.95824 6.47955C5.95918 6.47861 5.96013 6.47767 5.96108 6.47672C6.22077 6.21702 6.22077 5.79597 5.96108 5.53627L1.28956 0.864757Z"
+                         />
+                    </svg>
+
+                    <span class="visually-hidden">
+                      Переключить на следующий слайд.
+                    </span>
+                  </button>
+                </li>
+              </ul>
+            </li>
+            <li class="product__gallery__item">
+              <img class="product__galley__image" src="/img/png/main/ice_cream.png" width="66" height="150"
+                alt="Сливочное мороженое со вкусом банана">
+            </li>
+            <li class="product__gallery__item">
+              <img class="product__galley__image" src="/img/png/main/ice_cream_2.png" width="66" height="150"
+                alt="Карамельный пломбир с маршмеллоу">
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="products__buttons__container">
+        <ol class="products__buttons__list">
+          <li class="products__button__item">
+            <button class="products__button products__button--active" type="button">
+              <span class="visually-hidden">
+                Переключить на первое мороженое.
+              </span>
+            </button>
+          </li>
+          <li class="products__button__item">
+            <button class="products__button" type="button">
+              <span class="visually-hidden">
+                Переключить на второе мороженое.
+              </span>
+            </button>
+          </li>
+          <li class="products__button__item">
+            <button class="products__button" type="button">
+              <span class="visually-hidden">
+                Переключить на последнее мороженое.
+              </span>
+            </button>
+          </li>
+        </ol>
+        <ul class="social__list">
+          <li class="social__item">
+            <a class="social__link" href="https://t.me/htmlacademy">
+              <span class="visually-hidden">
+                Телеграмм.
+              </span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link" href="https://vk.com/htmlacademy">
+              <span class="visually-hidden">
+                Вконтакте.
+              </span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link" href="https://www.youtube.com/user/htmlacademyru">
+              <span class="visually-hidden">
+                Youtube.
+              </span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+
+    </section>
+  </main>
+
+</body>
+
 </html>
